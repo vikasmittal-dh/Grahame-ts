@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id value="ProfileLibrary"/>
+    <meta>
+        <lastUpdated value="2017-05-08T14:03:28.189+10:00"/>
+    </meta>
+    <language value="en-AU"/>
+    <text>
+        <status value="additional"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>Australian Digital Health Agency's Profile Library.</p>
+        </div>
+    </text>
+    <url value="http://ns.electronichealth.net.au/ci/fhir/ImplementationGuide/ProfileLibrary"/>
+    <name value="Profile Library"/>
+    <status value="draft"/>
+    <date value="2018-04-17"/>
+    <publisher value="Australian Digital Health Agency"/>
+    <contact>
+        <telecom>
+            <system value="other"/>
+            <value value="https://www.digitalhealth.gov.au/"/>
+        </telecom>
+    </contact>
+    <description
+        value="Models for the implementation of the Australian Digital Health Agency's Profile Library"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="AU"/>
+            <display value="Australia"/>
+        </coding>
+        <text value="Australia"/>
+    </jurisdiction>
+    <copyright value="Copyright 2017 Australian Digital Health Agency"/>
+    <fhirVersion value="1.9.0"/>
+    <package>
+        <name value="Profile Library"/>
+
+        <!-- RESOURCE PROFILES -->
+
+        <resource>
+            <example value="false"/>
+            <name value="patient-dh-base"/>
+            <description
+                value="The Agency Patient profile, as derived from the HL7 AU patient profile."/>
+            <sourceReference>
+                <reference value="StructureDefinition/patient-dh-base"/>
+            </sourceReference>
+        </resource>
+    </package>
+    <page>
+        <source value="index.html"/>
+        <title value="Australian Digital Health Agency Profile Library Implementation Guide"/>
+        <kind value="page"/>
+    </page>
+</ImplementationGuide>
