@@ -4,8 +4,7 @@
         "output": "output",
         "pages": "pages",
         "resources": [
-            "resources",
-            "examples"
+            "resources"
         ],
         "temp": "temp",
         "qa": "qa",
