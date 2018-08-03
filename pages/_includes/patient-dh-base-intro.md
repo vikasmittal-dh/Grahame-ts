@@ -1,5 +1,4 @@
 ## Base Patient 
-
 This profile builds on the patient administration details that have been defined by the HL7 Australia Australian Patient profile.
 
 ### Identifiers
