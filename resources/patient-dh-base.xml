@@ -1,55 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="patient-dh-base"/>
-  <url value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/patient-dh-base"/>
-  <version value="1.0.0"/>
-  <name value="PatientBase"/>
-  <title value="Base Patient"/>
-  <status value="draft"/>
-  <experimental value="true"/>
-  <publisher value="Australian Digital Health Agency"/>
+  <id value="patient-dh-base" />
+  <url value="http://ns.electronichealth.net.au/ci/fhir/StructureDefinition/patient-dh-base" />
+  <version value="1.0.0" />
+  <name value="PatientBase" />
+  <title value="Base Patient" />
+  <status value="draft" />
+  <experimental value="true" />
+  <publisher value="Australian Digital Health Agency" />
   <contact>
     <telecom>
-      <system value="email"/>
-      <value value="help@digitalhealth.gov.au"/>
+      <system value="email" />
+      <value value="help@digitalhealth.gov.au" />
     </telecom>
   </contact>
-  <description
-    value="Australian Digital Health Agency patient profile that has been derived from the HL7 Australia FHIR Australian Patient profile."/>
-  <copyright
-    value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/."/>
-  <fhirVersion value="3.0.1"/>
-  <kind value="resource"/>
-  <abstract value="false"/>
-  <type value="Patient"/>
-  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-patient"/>
-  <derivation value="constraint"/>
+  <description value="Australian Digital Health Agency patient profile that has been derived from the HL7 Australia FHIR Australian Patient profile." />
+  <copyright value="Copyright © 2018 Australian Digital Health Agency - All rights reserved. This content is licensed under a Creative Commons Attribution 4.0 International License. See https://creativecommons.org/licenses/by/4.0/." />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org.au/fhir/StructureDefinition/au-patient" />
+  <derivation value="constraint" />
   <differential>
     <element id="Patient">
-      <path value="Patient"/>
+      <path value="Patient" />
       <constraint>
-        <key value="inv-dh-pat-03"/>
-        <severity value="error"/>
-        <human value="The patient shall at least have an identifier or a name"/>
-        <expression value="Patient.identifier.exists() or Patient.name.exists()"/>
+        <key value="inv-dh-pat-03" />
+        <severity value="error" />
+        <human value="The patient shall at least have an identifier or a name" />
+        <expression value="Patient.identifier.exists() or Patient.name.exists()" />
       </constraint>
-    </element>    
+    </element>
     <element id="Patient.deceased[x]">
-      <path value="Patient.deceased[x]"/>
-      <short value="Indicates if the individual is deceased or not"/>
-      <mustSupport value="true"/>
+      <path value="Patient.deceased[x]" />
+      <mustSupport value="true" />
     </element>
-    <element id="Patient.deceased[x].deceased[x]:deceasedBoolean">
-      <path value="Patient.deceasedBoolean"/>
-      <sliceName value="deceasedBoolean"/>
-      <short value="Boolean indicates if individual is deceased"/>
-      <mustSupport value="true"/>
+    <element id="Patient.deceased[x]:deceasedBoolean">
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedBoolean" />
+      <mustSupport value="true" />
     </element>
-    <element id="Patient.deceased[x].deceased[x]:deceasedDateTime">
-      <path value="Patient.deceasedDateTime"/>
-      <sliceName value="deceasedDateTime"/>
-      <short value="Indicates date-time the individual died"/>
-      <mustSupport value="true"/>
+    <element id="Patient.deceased[x]:deceasedDateTime">
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedDateTime" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.deceased[x]:deceasedDateTime.extension:accuracyIndicator">
+      <path value="Patient.deceased[x].extension" />
+      <sliceName value="accuracyIndicator" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>
